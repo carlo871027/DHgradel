@@ -1,25 +1,45 @@
 package Com.talent;
 
 import io.restassured.RestAssured;
+
 import org.testng.annotations.Test;
 
-import static org.hamcrest.Matcher.*;
+import static org.hamcrest.Matchers.*;
+
 
 public class SWApiTestWithRestAssured {
 
-@Test
-    public void requestAresourcesThenLinkReturn (){
+    @Test
+    public void requestAresourcesThenLinkReturn() {
         String body = RestAssured
                 .given()
-                .baseUri("https://swapi.dev/api")
+                .baseUri("https://swapi.dev/api" +
+                        "" +
+                        "" +
+                        "" +
+                        "" +
+                        "" +
+                        "" +
+                        "" +
+                        "" +
+                        "" +
+                        "" +
+                        "" +
+                        "")
                 .and()
                 .queryParam("format", "json")
                 .when()
                 .get("/")
                 .then()
                 .log().all()
-                .and().assertThat().statusCode(is(equalsTo(200)));
+                .and().assertThat().statusCode(is(equalTo(200)))
+                .and()
+                .body("films", response -> notNullValue())
+                .body("vehicles", response -> notNullValue())
+                .body("people", response -> notNullValue())
+                .body("starships", response -> notNullValue())
+                .body("species", response -> notNullValue())
+                .and().extract().body().asString();
 
-
-
+    }
 }
