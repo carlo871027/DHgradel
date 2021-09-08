@@ -1,48 +1,30 @@
-Nombre=Carlos
-Apellido=Cuba
-Edad=33
-Profesion=Ingenieria de Sistemas
-
-//#Pares Clave Valor
-{
-"Nombre":"Carlos",
-"Apellido":"Cuba",
-"Edad":"33",
-"Profesion":"Ingenieria de Sistemas"
-}
-
-//#Array
 
 {
 "Nombre":"Carlos",
 "Apellido":"Cuba",
 "Edad":"33",
-"Profesion":"Ingenieria de Sistemas"
-"Direccion":["Direccion 1","Direccion 2","Direccion 3"]
+"Profesion":"Ingenieria de Sistemas",
+  "Color": "#fffff",
+  "Casado": false,
+  "Direccion":["Direccion 1","Direccion 2","Direccion 3"],
+  "Nacionalidades": [
+    {
+      "Pais": "India",
+      "Data": {
+        "Capital":"New Dhali",
+        "Altitud":343,
+        "Longitud":343
+      },
+    {
+      "Pais": "Bolivia",
+      "Data": {
+        "Capital": "La Paz",
+        "Altitud": 343,
+        "Longitud": 343
+      }
+    }
+  ]
 }
 
-//#Matriz
-{
-"Nombre":"Carlos",
-"Apellido":"Cuba",
-"Edad":"33",
-"Profesion":"Ingenieria de Sistemas"
-"Direccion":["Direccion 1","Direccion 2","Direccion 3"]
-"Nacionalidades": [
-{
-"Pais": "India",
-"Data": {
-"Capital":"New Dhali",
-"Altitud":343,
-"Longitud"343
-},
-{
-"Pais": "Bolivia",
-"Data": {
-"Capital":"La Paz",
-"Altitud":343,
-"Longitud"343
-}
-}
-]
-}
+
+
